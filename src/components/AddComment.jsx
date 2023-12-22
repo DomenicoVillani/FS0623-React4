@@ -5,7 +5,7 @@ class AddComment extends React.Component {
     state = {
         comment: {
             comment: '',
-            elementId: this.props.id
+            elementId: this.props.asin
         }
     }
     sendComment = async (e) => {
@@ -16,7 +16,8 @@ class AddComment extends React.Component {
                 method: 'POST',
                 body: JSON.stringify(this.state.comment),
                 headers: {
-                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0M2Y3NmI1MjViYjAwMThlZDA3ZWIiLCJpYXQiOjE3MDMxNjU4MTUsImV4cCI6MTcwNDM3NTQxNX0.mKuoXW7tenNwNxL9AV5BAsLcICUV0zAH2fIZgNokT0Q',
+                    Authorization: 
+                    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0M2Y3NmI1MjViYjAwMThlZDA3ZWIiLCJpYXQiOjE3MDMxNjU4MTUsImV4cCI6MTcwNDM3NTQxNX0.mKuoXW7tenNwNxL9AV5BAsLcICUV0zAH2fIZgNokT0Q',
                     'Content-Type': 'apllication/json',
                 }
             }
@@ -26,7 +27,7 @@ class AddComment extends React.Component {
                 this.setState({
                     comment: {
                         comment: '',
-                        elementId: this.props.id,
+                        elementId: this.props.asin,
                     }
                 })
             } else {
@@ -45,11 +46,11 @@ class AddComment extends React.Component {
                         <Form.Control type="text" value={this.state.comment.comment} onChange={(e) => this.setState({
                             comment: {
                                 ...this.state.comment,
-                                comment: e.target.value,
-                            }
+                                comment: e.target.value
+                            },
                         })} />
                     </Form.Group>
-                    <Button variant="success" type="submit">Invia recensione ✔️</Button>
+                    <Button variant="success" type="submit" className="my-2">Invia commento ✔️</Button>
                 </Form>
             </div>
         )

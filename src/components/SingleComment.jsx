@@ -1,4 +1,4 @@
-import {Col , Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 
 const SingleComment = (props) => {
     const deleteC = async (deleteComment) => {
@@ -20,15 +20,13 @@ const SingleComment = (props) => {
         }
     }
     return (
-        <div className='d-flex my-2'>
-            <Col className='border border-danger'>
+        <div className='d-flex justify-content-between my-2 border border-danger p-3'>
                 <div><p className='text-white'>{props.commento.comment}</p></div>
                 <div>
                     <Button variant='light' onClick={() => deleteC(props.commento._id)}>
                         elimina commento
                     </Button>
                 </div>
-            </Col>
         </div>
     )
 }
