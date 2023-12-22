@@ -34,7 +34,7 @@ class MyCommentArea extends React.Component {
         return (
             <div>
                 <MyCommentList commenti = {this.state.comments} />
-                <AddComment asin={this.props.id}/>
+                <AddComment idComment={this.props.id}/>
             </div>
         )
     }

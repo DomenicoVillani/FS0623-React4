@@ -6,7 +6,7 @@ class AddComment extends React.Component {
         comment: {
             comment: '',
             rate: 1,
-            elementId: this.props.asin
+            elementId: this.props.idComment
         }
     }
     sendComment = async (e) => {
@@ -29,7 +29,7 @@ class AddComment extends React.Component {
                     comment: {
                         comment: '',
                         rate: 1,
-                        elementId: this.props.asin,
+                        elementId: this.props.idComment,
                     }
                 })
             } else {
