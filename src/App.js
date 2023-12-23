@@ -13,9 +13,9 @@ function App() {
       <div>
         <MyHeader />
       </div>
-      <div>
+      <main>
         <AllMovie />
-      </div>
+      </main>
       <footer>
         <MyFooter />
       </footer>

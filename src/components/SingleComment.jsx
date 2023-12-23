@@ -20,7 +20,7 @@ const SingleComment = (props) => {
         }
     }
     return (
-        <div className='d-flex justify-content-between my-2 border border-danger p-3'>
+        <div className='d-flex justify-content-between my-2 border border-danger p-3 mt-3'>
                 <div><p className='text-white'>{props.commento.comment}</p></div>
                 <div>
                     <Button variant='light' onClick={() => deleteC(props.commento._id)}>
