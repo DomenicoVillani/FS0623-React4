@@ -36,7 +36,7 @@ class MySearch extends React.Component {
             <div>
                 <Row>
                     <Col>
-                        <Form.Group> {/* e' possibile solo cercare un nome senza spazi e niente doppie parole senza spazi */}
+                        <Form.Group>
                             <Form.Label className="text-white">Cerca un film</Form.Label>
                             <Form.Control type="text" value={this.state.search} onChange={(e) => this.setState({search:e.target.value})} />
                         </Form.Group>
